@@ -1,0 +1,24 @@
+<div class="calculator">
+    <label> value1</label>
+    <input type="number" [(ngModel)]="num1" placeholder="Enter Number">
+    <br><br>
+    <label> value2</label>
+    <input type="number" [(ngModel)]="num2"placeholder="Enter Number">
+    <br><br>
+    <label> value3</label>
+    <input type="number" [(ngModel)]="num3"placeholder="Enter Number">
+    <br><br>
+    <button type="button" (click)="divide()">Divide</button>
+    <button type="button" (click)="add()">Addition</button>
+    <button type="button" (click)="sub()">Subtraction</button>
+    <button type="button" (click)="mul()">Multiplication </button>
+    <button type="button" (click)="avg()">Average</button>
+    <button type="button" (click)="reset()">Clear</button>
+
+    <h3 *ngIf="Result.isSuccess">
+        Result: {{Result.returnValue}}</h3>
+    <h3 *ngIf="!Result.isSuccess">
+        Result: {{Result.responseText}}</h3>
+
+
+</div>

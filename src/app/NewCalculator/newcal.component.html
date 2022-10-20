@@ -1,0 +1,16 @@
+<div class="calculator">
+    <input type="number" name="num1" [(ngModel)]="num1" placeholder="Enter Number">
+    <br><br>
+    <input type="number" name="num2" [(ngModel)]="num2" placeholder="Enter Number">
+    <br><br>
+    <input type="number" name="num4" [(ngModel)]="num4" placeholder="Enter Number">
+    <br><br>
+    <button (click)="add()">Add</button>
+    <button (click)="sub()">Sub</button>
+    <button (click)="mul()">Mul</button>
+    <button (click)="avg()">Avg</button>
+    <button (click)="div()">Div</button>
+<h3>
+    Result : {{result}}
+</h3>
+</div> 
