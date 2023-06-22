@@ -1,0 +1,27 @@
+   <mat-horizontal-stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Step 1</ng-template>
+        <mat-form-field>
+          <mat-label>Select an option</mat-label>
+          <br>
+          <mat-select formControlName="optionControl">
+            <mat-option *ngFor="let option of options" [value]="option.value">{{ option.label }}</mat-option>
+          </mat-select>
+        </mat-form-field>
+        <br>  
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Step 2</ng-template>
+      <p>You selected: {{ firstFormGroup.value.optionControl }}</p>
+      
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+      </div>
+    </mat-step>
+  </mat-horizontal-stepper>
+  
